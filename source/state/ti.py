@@ -18,53 +18,18 @@ screen_height = 800
 screen = pygame.display.set_mode((screen_width, screen_height))
 pygame.display.set_caption("Space Invanders!")
 
-# Fonts
-font30 = pygame.font.Font("font\\Fussion-3zgAz.ttf", 30)
-font40 = pygame.font.Font("font\\Dragon Slayer.ttf", 40)
-font20 = pygame.font.Font("font\\Fussion-3zgAz.ttf", 20)
-# Load Font
-font_btn = pygame.font.Font("font\\Fussion-3zgAz.ttf", 30)
-font_title = pygame.font.Font("font\\Dragon Slayer.ttf", 75)
 
-# Load Sound and SFX
-explosion_fx = pygame.mixer.Sound("mus\\explosion.wav")
-explosion_fx.set_volume(0.25)
 
-explosion2_fx = pygame.mixer.Sound("mus\\explosion2.wav")
-explosion2_fx.set_volume(0.25)
 
-laser_fx = pygame.mixer.Sound("mus\\laser.wav")
-laser_fx.set_volume(0.25)
 
-main_fx = pygame.mixer.Sound("mus\\SoundTrack_Main.mp3")
-main_fx.set_volume(0.75)
 
-play_fx = pygame.mixer.Sound("mus\\SoundTrack_Play.mp3")
-play_fx.set_volume(0.75)
-
-button_click_fx = pygame.mixer.Sound("mus\\btn_click.mp3")
-button_click_fx.set_volume(0.5)
-vol_status = True
-
-# Define game variables
-rows = 5
-cols = 5
-
-# bullet countdown
-alien_countdown = 1000
-last_alien_shot = pygame.time.get_ticks()
 
 # screen countdown
 countdown = 3
 last_count = pygame.time.get_ticks()
 
-# Status Game
-game_over = 0  # 0: no game over, 1: player has won, -1: player has lost
 
-# Define Colors
-red = (255, 0, 0)
-green = (0, 255, 0)
-white = (255, 255, 255)
+
 
 # Load Image
 bg = pygame.image.load("img/bg.png").convert_alpha()
@@ -563,7 +528,7 @@ def main_menu(
                     sys.quit()
                 # Check Colision Button Volume
                 if btn_vol.check_Colision(Mouse_Pos):
-                    if vol_status:h
+                    if vol_status:
                         vol_status = False
                     else:
                         vol_status = True
