@@ -1,3 +1,5 @@
+__author__= "NVHA"
+
 import pygame
 
 # Class Explosion

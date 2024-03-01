@@ -1,13 +1,13 @@
 import pygame
-from source.state.constant import c
+from ..constant import c
 from .bullets import Bullets
 from .explosion import Explosion
 
 # Class SpaceShip
-class Spaceship(pygame.sprite.Sprite):
+class Player(pygame.sprite.Sprite):
     def __init__(self, x, y, health,scr):
         pygame.sprite.Sprite.__init__(self)
-        self.image = pygame.image.load("img/spaceship.png")
+        self.image = pygame.image.load("resources/img/alien_spaceship/spaceship.png")
         self.rect = self.image.get_rect()
         self.rect.center = [x, y]
         self.health_start = health

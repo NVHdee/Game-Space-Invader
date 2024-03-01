@@ -1,6 +1,7 @@
+__author__= "NVHA"
+
 import pygame 
-import random
-from ..state.constant import c
+from ..constant import c
 from .explosion import Explosion
 # Class Bullets
 class Bullets(pygame.sprite.Sprite):

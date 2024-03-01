@@ -1,4 +1,4 @@
-author= "NVHA"
+__author__= "NVHA"
 import pygame
 
 __name__ = "__main__"
@@ -7,9 +7,18 @@ __name__ = "__main__"
 clock = pygame.time.Clock()
 fps = 60
 
-#Size Screem
+#States for game
+main_menu = 'main menu'
+load_screen = 'load screen'
+game_over = 'game over'
+
+#Size screen
 screen_width = 600
 screen_height = 800
+screen_size = (screen_width,screen_height)
+
+#Tiltle Game
+original_cap = "Space Invader"
 
 # Fonts
 font30 = pygame.font.Font("font\\Fussion-3zgAz.ttf", 30)
@@ -79,3 +88,10 @@ bullet_group = pygame.sprite.Group()
 alien_group = pygame.sprite.Group()
 alien_bullet_group = pygame.sprite.Group()
 explosion_group = pygame.sprite.Group()
+
+#Player States
+Left = 'left'
+Right = 'right'
+Up = 'up'
+Down = 'down'
+Auto_Shoot = "auto shoot"
